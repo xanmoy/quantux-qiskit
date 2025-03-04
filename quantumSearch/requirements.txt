@@ -1,0 +1,4 @@
+qiskit
+qiskit[visualization]
+qiskit-aer
+numpy
