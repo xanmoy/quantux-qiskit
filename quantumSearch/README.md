@@ -1,37 +1,86 @@
-# Quantum Search Algorithm
+# Quantum Search Algorithm (Grover's Algorithm) Implementation
 
-## Introduction
-Quantum search algorithms utilize quantum mechanics to search an unsorted database significantly faster than classical algorithms. The most well-known quantum search algorithm is **Grover's Algorithm**, which provides a quadratic speedup compared to classical search methods.
+## Overview
 
-## Grover's Algorithm
-Grover's Algorithm is a quantum algorithm that finds a marked item in an unsorted database of \( N \) elements in approximately \( O(\sqrt{N}) \) queries, whereas a classical search requires \( O(N) \) queries.
+This project demonstrates an implementation of Grover's Quantum Search Algorithm using Qiskit, showcasing the power of quantum computing in solving search problems more efficiently than classical algorithms.
 
-### **Steps of Grover's Algorithm**
-1. **Initialize the Quantum State**:
-   - Start with a quantum register of \( n \) qubits, where \( n = \log_2(N) \).
-   - Apply Hadamard gates to create an equal superposition of all possible states.
+## 🔬 Algorithm Concept
 
-2. **Oracle Function**:
-   - A function that marks the target state by flipping its phase.
+Grover's algorithm provides a quadratic speedup for searching an unsorted database, reducing the time complexity from O(N) in classical search to O(√N) in quantum search.
 
-3. **Grover Diffusion Operator**:
-   - Amplifies the probability of the marked state by applying inversion about the mean.
+### Key Features
+- Searches an unsorted database with O(√N) time complexity
+- Demonstrates quantum amplitude amplification
+- Provides a probabilistic search mechanism
 
-4. **Repeat the Oracle and Diffusion Operator**:
-   - The number of iterations required is approximately \( \frac{\pi}{4} \sqrt{N} \).
+## 🚀 Technical Details
 
-5. **Measurement**:
-   - Collapse the quantum state and obtain the target element with high probability.
+### Algorithm Steps
+1. **Superposition Initialization**: Create an equal superposition of all possible states
+2. **Oracle Marking**: Identify the target state
+3. **Diffusion Operator**: Amplify the amplitude of the target state
+4. **Measurement**: Retrieve the most likely solution
 
-## Complexity Analysis
-- **Classical search**: \( O(N) \)
-- **Grover’s Algorithm**: \( O(\sqrt{N}) \)
+## 📦 Prerequisites
 
-## Applications
-- Database search
-- Cryptography (e.g., breaking symmetric encryption)
+- Python 3.8+
+- Qiskit
+- NumPy
+- Matplotlib
+
+## 🛠 Installation
+
+```bash
+python3 -m venv quantum_env
+source quantum_env/bin/activate
+pip install qiskit[visualization] numpy matplotlib
+```
+
+## 💻 Usage
+
+```python
+# Run the quantum search algorithm
+python main.py
+```
+
+## 🧮 Mathematical Insight
+
+The algorithm works by:
+- Initializing qubits in superposition
+- Marking the target state via phase inversion
+- Amplifying the target state's probability
+- Repeating amplification steps optimally
+
+## 🔍 Limitations
+
+- Works best for small to medium-sized search spaces
+- Requires precise quantum circuit construction
+- Probabilistic nature means not 100% guaranteed to find the solution
+
+## 📚 References
+- Grover's original paper (1996)
+- Nielsen & Chuang's Quantum Computation and Quantum Information
+- Qiskit Documentation
+
+## 🌐 Potential Applications
+- Database searching
 - Optimization problems
+- Cryptanalysis
+- Machine learning
 
-## Conclusion
-Grover’s Algorithm demonstrates the power of quantum computing by achieving a significant speedup over classical search methods. As quantum hardware advances, practical applications of quantum search will become increasingly feasible.
+## 🧪 Experimental Notes
+- The implementation uses a 2-qubit system
+- Target state is hardcoded as |11⟩
+- Simulation performed using Qiskit Aer
 
+## 🔬 Future Improvements
+- Generalize oracle for different target states
+- Implement for larger qubit systems
+- Add more robust error handling
+
+## 📝 License
+MIT License
+
+## 👥 Contributors
+- Tanmoy Ganguly
+- Open to community contributions!

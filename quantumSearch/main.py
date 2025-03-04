@@ -4,20 +4,6 @@
 #     Apply the Oracle 
 #     Apply the Diffusion Operator 
 #     Measure the qubits 
-    
-#     The code uses the  Aer  simulator to run the quantum circuit and display the result. 
-#     The result is displayed as a histogram showing the probabilities of measuring each possible state.
-
-#     The quantum search algorithm is a quantum algorithm that can be used to search an unsorted database faster than classical algorithms.
-#     It is based on Grover's algorithm, which can be used to search a list of N items in O(√N) time complexity.
-#     The algorithm works by amplifying the amplitude of the target state (the solution) and reducing the amplitude of the other states through a series of operations.
-#     The Oracle operation marks the target state, and the Diffusion Operator amplifies the target state and reduces the other states.
-#     By repeating these operations multiple times, the algorithm converges to the target state, allowing for efficient search.
-#     The quantum search algorithm has applications in various fields, such as optimization, cryptography, and machine learning.
-#     Qiskit is an open-source quantum computing framework that provides tools and libraries for developing quantum algorithms and applications.
-#     The code demonstrates a simple implementation of the quantum search algorithm using Qiskit, showing the steps involved in the algorithm and how to run a quantum circuit to perform the search.
-#     The code uses the Aer simulator to simulate the quantum circuit and display the result as a histogram showing the probabilities of measuring each possible state.
-#     The quantum search algorithm is a fundamental quantum algorithm that showcases the power of quantum computing in solving specific problems more efficiently than classical algorithms.
 
 from qiskit import QuantumCircuit, Aer, transpile, assemble, execute
 from qiskit.visualization import plot_histogram
